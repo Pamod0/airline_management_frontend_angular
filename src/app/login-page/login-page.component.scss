@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+$primary-color: #2691d9;
+$secondary-color: aliceblue;
+$defult-font: 'Poppins', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    body {
+      height: 100vh;
+      background-color: $primary-color;
+    }
+
+      .main-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    
+        .login-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position:absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: 2px solid $primary-color;
+          padding: 50px;
+          border-radius: 30px;
+          background-color: $secondary-color;
+          font-family: $defult-font;
+          
+          h1 {
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: $primary-color;
+            font-size: 35px;
+          }
+        
+          .form-items {
+            display: flex;
+            flex-direction: column;
+        
+            > input {
+              width: 320px;
+              height: 50px;
+              border: 2px solid $primary-color;
+              border-radius: 20px;
+              margin: 10px;
+              text-align: center;
+            }
+          }
+        
+          .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        
+            .btn-submit {
+              width: 320px;
+              height: 50px;
+              padding: 5px;
+              border-radius: 30px;
+              background-color: $primary-color;
+              color: $secondary-color;
+              border: 2px $primary-color;
+            }
+        }
+  }
+  
