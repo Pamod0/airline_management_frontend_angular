@@ -9,11 +9,12 @@
     <div class="main-container">
         <div class="login-container">
             <h1>Login</h1>
-            <form class="form-container">
+            <form 
+                [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-container">
                 <div class="form-items">
-                    <input type="text" id="username" name="username" required
+                    <input type="email" formControlName="email"
                     placeholder="Email Address">
-                    <input type="password" id="password" name="password" required
+                    <input type="password" formControlName="password"
                     placeholder="Password">
                 </div>
                 <div class="btn-container">
