@@ -56,6 +56,11 @@ $defult-font: 'Poppins', sans-serif;
               margin: 10px;
               text-align: center;
             }
+
+            span {
+              text-align: center;
+              color: red;
+            }
           }
 
           input.ng-invalid.ng-touched {

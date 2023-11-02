@@ -18,9 +18,9 @@
                     placeholder="Password">
                 </div>
                 <div class="btn-container">
-                    <button class="btn-submit" type="submit">Login</button>
+                    <button [disabled]="loginForm.invalid" class="btn-submit" type="submit">Login</button>
                     <div class="link-container">
-                        <a routerLink="/signup">Don't have an account?</a>
+                        <a routerLink="/register">Don't have an account?</a>
                         <a routerLink="/forgot-password">Forgot password?</a>
                     </div>
                 </div>
