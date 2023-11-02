@@ -9,7 +9,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { UsersListComponent } from './user-management/users-list/users-list.component';
-import { AddEditUserListComponent } from './user-management/add-edit-user-list/add-edit-user-list.component';
+import { AddEditUsersComponent } from './user-management/add-edit-users/add-edit-users.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { AddEditUserListComponent } from './user-management/add-edit-user-list/a
     ForgotPasswordComponent,
     RegisterPageComponent,
     UsersListComponent,
-    AddEditUserListComponent
+    AddEditUsersComponent
   ],
   imports: [
     FormsModule,

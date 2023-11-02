@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddEditUserListComponent } from './add-edit-user-list.component';
+import { AddEditUsersComponent } from './add-edit-users.component';
 
 describe('AddEditUserListComponent', () => {
-  let component: AddEditUserListComponent;
-  let fixture: ComponentFixture<AddEditUserListComponent>;
+  let component: AddEditUsersComponent;
+  let fixture: ComponentFixture<AddEditUsersComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AddEditUserListComponent]
+      declarations: [AddEditUsersComponent]
     });
-    fixture = TestBed.createComponent(AddEditUserListComponent);
+    fixture = TestBed.createComponent(AddEditUsersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
