@@ -1,37 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-</head>
-<body>
-    <div class="main-container">
-        <div class="login-container">
-            <h1>Sign Up</h1>
-            <form 
-                [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-container">
-                <div class="form-items" novalidate>
-                    <input type="email" formControlName="email" 
-                        placeholder="Email Address">
-                    <input type="password" formControlName="password"
-                        placeholder="Password">
-                    <input type="password" formControlName="confirmPassword"
-                        placeholder="Confirm Password">
-                    <span *ngIf="registerForm.errors?.['passwordmatcherror']">
-                        Password does not match 
-                    </span>
+<div class="main-container">
+    <div class="login-container">
+        <h1>Sign Up</h1>
+        <form 
+            [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-container">
+            <div class="form-items" novalidate>
+                <input type="email" formControlName="email" 
+                    placeholder="Email Address">
+                <input type="password" formControlName="password"
+                    placeholder="Password">
+                <input type="password" formControlName="confirmPassword"
+                    placeholder="Confirm Password">
+                <span *ngIf="registerForm.errors?.['passwordmatcherror']">
+                    Password does not match 
+                </span>
+            </div>
+            <div class="btn-container">
+                <button class="btn-submit" type="submit" 
+                [disabled]="registerForm.invalid">
+                    Sign Up
+                </button>
+                <div class="link-container">
+                    <a routerLink="/user/login">Already have an account?</a>
                 </div>
-                <div class="btn-container">
-                    <button [disabled]="registerForm.invalid" class="btn-submit" 
-                        type="submit">Sign Up</button>
-                    <div class="link-container">
-                        <a routerLink="/">Already have an account?</a>
-                    </div>
-                </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
-</body>
-</html>
-
+</div>

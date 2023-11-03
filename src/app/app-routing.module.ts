@@ -9,6 +9,8 @@ import { UserHomeComponent } from './user/user-home/user-home.component';
 import { UsersListComponent } from './user-management/users-list/users-list.component';
 import { AddEditUsersComponent } from './user-management/add-edit-users/add-edit-users.component';
 
+import { LoginPageTestComponent } from './user/login-page-test/login-page-test.component';
+
 
 const routes: Routes = [
   { path: '', component: MainPageComponent  },
@@ -18,6 +20,7 @@ const routes: Routes = [
   { path: 'user/home', component: UserHomeComponent},
   { path: 'management/userslist', component: UsersListComponent },
   { path: 'user/details', component: AddEditUsersComponent },
+  { path: 'test', component: LoginPageTestComponent },
   { path: '**', redirectTo: '' }
 ];
 

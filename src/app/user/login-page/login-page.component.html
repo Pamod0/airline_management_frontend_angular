@@ -1,31 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
-</head>
-<body>
-    <div class="main-container">
-        <div class="login-container">
-            <h1>Login</h1>
-            <form 
-                [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-container">
-                <div class="form-items">
-                    <input type="email" formControlName="email"
-                    placeholder="Email Address">
-                    <input type="password" formControlName="password"
-                    placeholder="Password">
-                </div>
-                <div class="btn-container">
-                    <button [disabled]="loginForm.invalid" class="btn-submit" type="submit">Login</button>
-                    <div class="link-container">
-                        <a routerLink="/register">Don't have an account?</a>
-                        <a routerLink="/forgot-password">Forgot password?</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+      <mat-toolbar color="primary">Login</mat-toolbar>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"
+        fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+          <mat-form-field>
+            <input matInput type="email" formControlName="email"
+              placeholder="Email Address">
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput type="password" formControlName="password"
+              placeholder="Password">
+          </mat-form-field>
+          <button class="submit" mat-raised-button color="primary" 
+            [disabled]="loginForm.invalid" 
+            type="submit">Login</button>
+          <div class="link-container">
+            <button mat-button routerLink="/user/register">
+              Don't have an account?
+            </button>
+            <button mat-button routerLink="/user/forgot-password">
+              Forgot password?
+            </button>
+          </div>
+      </form>
+  
+    </mat-card>
+  </div>
+  
+  
