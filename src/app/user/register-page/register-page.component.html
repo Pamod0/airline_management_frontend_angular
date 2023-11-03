@@ -1,28 +1,35 @@
-<div class="main-container">
-    <div class="login-container">
-        <h1>Sign Up</h1>
-        <form 
-            [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-container">
-            <div class="form-items" novalidate>
-                <input type="email" formControlName="email" 
-                    placeholder="Email Address">
-                <input type="password" formControlName="password"
-                    placeholder="Password">
-                <input type="password" formControlName="confirmPassword"
-                    placeholder="Confirm Password">
-                <span *ngIf="registerForm.errors?.['passwordmatcherror']">
-                    Password does not match 
-                </span>
-            </div>
-            <div class="btn-container">
-                <button class="btn-submit" type="submit" 
-                [disabled]="registerForm.invalid">
-                    Sign Up
-                </button>
-                <div class="link-container">
-                    <a routerLink="/user/login">Already have an account?</a>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+      <mat-toolbar color="primary">Register</mat-toolbar>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"
+        fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+          <mat-form-field>
+            <input matInput type="email" formControlName="email"
+              placeholder="Email Address">
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput type="password" formControlName="password"
+              placeholder="Password">
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput type="password" formControlName="confirmPassword"
+              placeholder="Confirm Password">
+          </mat-form-field>
+          <span *ngIf="registerForm.errors?.['passwordmatcherror']">
+            Password does not match 
+          </span>
+          <button class="submit" mat-raised-button color="primary" [disabled]="registerForm.invalid" 
+            type="submit">Register</button>
+          <div class="link-container">
+            <button mat-button routerLink="/user/login">
+              Already have an account?
+            </button>
+          </div>
+      </form>
+  
+    </mat-card>
+  </div>
+  
+  
