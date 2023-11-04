@@ -3,12 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatCardModule } from '@angular/material/card'
-import { MatInputModule } from '@angular/material/input'; 
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MaterialModule } from './material.module'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,14 +36,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
-    FlexLayoutModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatCardModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatToolbarModule
+
+    MaterialModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
