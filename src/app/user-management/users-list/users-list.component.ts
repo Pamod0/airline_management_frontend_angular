@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditUsersComponent } from '../add-edit-users/add-edit-users.component';
+import { UserService } from 'src/app/services/user.service';
+import { CoreService } from 'src/app/services/core.service';
 
 @Component({
   selector: 'app-users-list',
@@ -22,7 +24,7 @@ export class UsersListComponent implements OnInit{
   public dataSource:any = [];
 
   constructor(
-    private http: HttpClient,
+    private userService: UserService,
     private dialog: MatDialog,
     ) {}
 
@@ -38,7 +40,7 @@ export class UsersListComponent implements OnInit{
   
 
   getUsers() {
-    this.http.get('http://localhost:3000/api/user')
+    this.userService.getUsers()
     .subscribe((data) => {
       console.log(data);
       this.getJsonValue = data;
