@@ -1,0 +1,38 @@
+$primary-color: #2691d9;
+
+.main-div mat-card {
+    padding: 0px;
+
+    .login-form {
+        padding: 20px;
+
+        .submit {
+            color: #ffffff;
+            background-color: #3f51b5;
+            height: 48px;
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: space-around;
+
+            button {
+                margin: 1px;
+                font-size: 14px;
+                color: #3f51b5;
+                border: none;
+            }
+
+            button:nth-child(1) {
+                margin: 25px 0px 0 25px;
+            
+            }
+
+            
+            button:nth-child(2) {
+                margin: 25px 25px 0 0px;
+            
+            }
+        }
+    }
+}

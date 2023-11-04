@@ -1,0 +1,36 @@
+<div mat-dialog-title>
+    <h1>Update User Details</h1>
+</div>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>First name</mat-label>
+                <input matInput type="text" placeholder="Ex. Technical" 
+                formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Ex. Babaji" 
+                formControlName="lastName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Contact Number</mat-label>
+                <input matInput placeholder="Ex. 0772584471" 
+                formControlName="contactNumber" type="tel">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Ex. 123 Main Street, Apt 4B, New York, NY 10001, USA" 
+                formControlName="address">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-radio-group aria-label="Select an option" formControlName="gender">
+                <mat-label><b>Gender</b></mat-label>
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+                <mat-radio-button value="other">Other</mat-radio-button>
+              </mat-radio-group>
+        </div>
