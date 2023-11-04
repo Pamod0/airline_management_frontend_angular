@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddEditUsersComponent } from '../add-edit-users/add-edit-users.component';
 
 @Component({
   selector: 'app-users-list',
@@ -14,21 +16,34 @@ export class UsersListComponent implements OnInit{
     'fistname', 
     'lastname', 
     'phone', 
-    'address'
+    'address',
+    'action',
   ];
   public dataSource:any = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private dialog: MatDialog,
+    ) {}
+
   ngOnInit(): void {
     this.getUsers();
   }
 
-  public getUsers() {
+  openAddEditForm() {
+    this.dialog.open(
+      AddEditUsersComponent, 
+      { width: '500px', height: '450px' })
+  }
+  
+
+  getUsers() {
     this.http.get('http://localhost:3000/api/user')
     .subscribe((data) => {
-      console.table(data);
+      console.log(data);
       this.getJsonValue = data;
       this.dataSource = data;
+      console.log(this.dataSource);
      });
   }
 }
