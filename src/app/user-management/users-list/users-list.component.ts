@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditUsersComponent } from '../add-edit-users/add-edit-users.component';
 import { UserService } from 'src/app/services/user.service';
-import { CoreService } from 'src/app/services/core.service';
+// import { CoreService } from 'src/app/services/core.service';
 
 @Component({
   selector: 'app-users-list',
