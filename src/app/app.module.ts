@@ -13,9 +13,10 @@ import { RegisterPageComponent } from './user/register-page/register-page.compon
 import { UsersListComponent } from './user-management/users-list/users-list.component';
 import { AddEditUsersComponent } from './user-management/add-edit-users/add-edit-users.component';
 import { UserHomeComponent } from './user/user-home/user-home.component';
-import { MainPageComponent } from './main-page/main-page.component';
 import { LoginPageTestComponent } from './user/login-page-test/login-page-test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 @NgModule({
@@ -27,8 +28,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UsersListComponent,
     AddEditUsersComponent,
     UserHomeComponent,
-    MainPageComponent,
-    LoginPageTestComponent
+    LoginPageTestComponent,
+    NavbarComponent,
+    HomePageComponent
   ],
   imports: [
     FormsModule,

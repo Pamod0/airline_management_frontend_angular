@@ -1,0 +1,199 @@
+/*navbar section*/
+.navbar-section {
+  top: 0;
+  z-index: 1000;
+  height: 16vh;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  /*border-bottom: 1px solid #ccc;*/ /* Regular border */
+  box-shadow: 0 2px 4px #c3c3c3; /* Shadow */
+}
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.95% 3.58%;
+  height: 8vh;
+}
+.navbar-wrapper a {
+  text-decoration: none;
+}
+.navbar-wrapper .navbar-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+.navbar-wrapper .navbar-links a {
+  color: #262626;
+}
+.navbar-wrapper .navbar-links a:hover,
+.navbar-links a:active {
+  color: #9370da;
+}
+.navbar-wrapper .navbar-btn {
+  width: 175px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #9370da;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  /*letter-spacing: 2px;*/
+  text-decoration: none;
+  outline: 0px;
+  box-shadow: none;
+  transition: all 0.5s ease 0s;
+  margin: 0px auto;
+  border: 2px solid #9370da;
+  border-radius: 23px;
+}
+.navbar-wrapper .navbar-btn:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #9370da;
+  border: 2px solid #9370da;
+}
+.navbar-btn .mail-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  transition: all 0.5s ease 0s;
+}
+.navbar-btn:hover .mail-icon {
+  content: url("/assets/navbar/mail-icon-blue.svg");
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  transition: all 0.5s ease 0s;
+}
+.navbar-btn-wrapper a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.5s ease 0s;
+}
+.navbar-btn-wrapper span {
+  margin-left: -23px;
+}
+
+/* Mobile Navbar */
+.navbar-section-mobile {
+  display: none;
+}
+.logo-n-ham-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-logo-mobile {
+  z-index: 100;
+  margin: 25px 0 0 25px;
+}
+.hamburger-btn-wrapper {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.hamburger-btn {
+  width: 50px;
+  height: 6px;
+  background: #262626;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.hamburger-btn::before,
+.hamburger-btn::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #262626;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.hamburger-btn::before {
+  transform: translateY(-16px);
+}
+.hamburger-btn::after {
+  transform: translateY(16px);
+}
+.hamburger-btn-wrapper.open .hamburger-btn {
+  transform: translate(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.hamburger-btn-wrapper.open .hamburger-btn::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.hamburger-btn-wrapper.open .hamburger-btn::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  color: #262626;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #262626;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

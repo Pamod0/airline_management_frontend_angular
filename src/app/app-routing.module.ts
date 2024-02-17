@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MainPageComponent } from './main-page/main-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './user/login-page/login-page.component';
 import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.component';
 import { RegisterPageComponent } from './user/register-page/register-page.component';
@@ -11,9 +11,8 @@ import { AddEditUsersComponent } from './user-management/add-edit-users/add-edit
 
 import { LoginPageTestComponent } from './user/login-page-test/login-page-test.component';
 
-
 const routes: Routes = [
-  { path: '', component: MainPageComponent  },
+  { path: '', component: HomePageComponent  },
   { path: 'user/login', component: LoginPageComponent },
   { path: 'user/register', component: RegisterPageComponent },
   { path: 'user/forgot-password', component: ForgotPasswordComponent },
